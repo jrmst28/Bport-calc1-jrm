@@ -1,9 +1,9 @@
 
 class Generator(BaseGenerator):
     def data(self):
-        xs=list(var("x y t w"))
+        xs=list(var("x y t w r p q u v"))
         shuffle(xs)
-        fns=list(var("f g h"))
+        fns=list(var("f g h F G H R S j"))
         shuffle(fns)
         
         #polynomial
@@ -19,19 +19,36 @@ class Generator(BaseGenerator):
             }
         ]
         
-        #trig + transcendental
-        trig = choice([cos,sin])
-        transc = choice([log,exp])
-        f = randrange(1,5)*choice([-1,1])*trig(xs[1]) + \
-            randrange(1,5)*choice([-1,1])*transc(xs[1])
+        #miniproduct
+        shuffle(xs)
+        shuffle(fns)
+        ps = sample(list(range(1,7)),3)
+        left_factor = xs[0]^ps[0]
+        right_factor = sum([randrange(1,10)*choice([-1,1])*xs[0]^p for p in [1..2]])
+        flatex = LatexExpr(f"{left_factor}\\left({right_factor}\\right)")
+        f = left_factor * right_factor
         fs += [
             {
-                "f":f,
-                "fn":fns[1],
-                "x":xs[1],
+                "f":flatex,
+                "fn":fns[0],
+                "x":xs[0],
                 "df":f.diff(),
             }
         ]
+
+        # #trig + transcendental
+        # trig = choice([cos,sin])
+        # transc = choice([log,exp])
+        # f = randrange(1,5)*choice([-1,1])*trig(xs[1]) + \
+        #     randrange(1,5)*choice([-1,1])*transc(xs[1])
+        # fs += [
+        #     {
+        #         "f":f,
+        #         "fn":fns[1],
+        #         "x":xs[1],
+        #         "df":f.diff(),
+        #     }
+        # ]
         
         #fractional/negative powers
         coprimes = [3,4,5,7]
