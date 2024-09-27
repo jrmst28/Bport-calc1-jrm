@@ -2,9 +2,8 @@
 <knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
     <intro>
         <p>
-Demonstrate and explain how to find the derivative of the following functions.
-Be sure to explicitly denote which derivative rules (scalar multiple, sum/difference, etc.) you are using in your work.
-(Note that we use the notation <m>\log(x)=\ln(x)=\log_e(x)</m>.)
+Compute the derivatives using the most basic rules of powers, sums, differences, constants, and <m>e^x</m>.  
+No product rule, quotient rule, etc.
         </p>
     </intro>
     <!-- {{#fs}} -->
