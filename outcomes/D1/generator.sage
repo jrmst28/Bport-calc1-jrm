@@ -23,10 +23,12 @@ class Generator(BaseGenerator):
         shuffle(xs)
         shuffle(fns)
         ps = sample(list(range(1,7)),3)
-        left_factor = xs[0]^ps[0]
-        right_factor = sum([randrange(1,10)*choice([-1,1])*xs[0]^p for p in [1..2]])
-        flatex = LatexExpr(f"{left_factor}\\left({right_factor}\\right)")
-        f = left_factor * right_factor
+        first_factor = xs[0]^ps[0]
+        second_factor = sum([randrange(1,10)*choice([-1,1])*xs[0]^p for p in [1..2]])
+        #factors = [first_factor,second_factor]
+        #factors =shuffle(factors)        
+        flatex = latex(first_factor)+'\cdot'+latex(second_factor)
+        f = first_factor * second_factor
         fs += [
             {
                 "f":flatex,
