@@ -27,7 +27,7 @@ class Generator(BaseGenerator):
         second_factor = sum([randrange(1,10)*choice([-1,1])*xs[0]^p for p in [1..2]])
         #factors = [first_factor,second_factor]
         #factors =shuffle(factors)        
-        flatex = latex(first_factor)+'\cdot'+latex(second_factor)
+        flatex = latex(first_factor)+'\\cdot'+latex(second_factor)
         f = first_factor * second_factor
         fs += [
             {
