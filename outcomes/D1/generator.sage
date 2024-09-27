@@ -33,7 +33,7 @@ class Generator(BaseGenerator):
             #factors = [first_factor,second_factor]
             #factors =shuffle(factors)    
             first_factor_latex = latex(x)+ '^{'+latex(first_power)+'}'
-            flatex = first_factor_latex+'\\cdot\\left\\('+latex(second_factor)+'\\right\\)'
+            flatex = first_factor_latex+'\\cdot ('+latex(second_factor)+')'
             f = first_factor * second_factor
             fs += [
                 {
