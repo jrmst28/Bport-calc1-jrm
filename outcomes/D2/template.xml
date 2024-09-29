@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>
+Compute the derivatives using the product or quotient rule as appropriate.  
+As such, this outcome only uses power and exponential functions.
+        </p>
+    </intro>
+    <!-- {{#fs}} -->
+        <knowl>
+            <content>
+                <p>
+<m>{{fn}}({{x}}) = {{f}}</m>
+                </p>
+            </content>
+            <outtro>
+                <p>
+<me>{{fn}}'({{x}}) = {{df}}</me>
+                </p>
+            </outtro>
+        </knowl>
+    <!-- {{/fs}} -->
+</knowl>

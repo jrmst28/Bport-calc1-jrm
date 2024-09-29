@@ -12,5 +12,13 @@
 Derivatives of Powers and exponentials
             </description>
         </outcome>
+        <outcome>
+            <title>Derivatives of products and quotients</title>
+            <slug>D2</slug>
+            <path>outcomes/D2</path>
+            <description>
+Derivatives of products and quotients
+            </description>
+        </outcome>
     </outcomes>
 </bank>
