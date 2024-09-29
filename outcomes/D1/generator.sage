@@ -115,6 +115,6 @@ class Generator(BaseGenerator):
             ]
 
         shuffle(fs)
-        fs=fs[:8]
+        fs=fs[:5]
         return {"fs":fs}
         
