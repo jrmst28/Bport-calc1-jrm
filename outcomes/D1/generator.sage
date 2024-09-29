@@ -58,17 +58,17 @@ class Generator(BaseGenerator):
         ]
         
         #simple power
-        x=choice(xs)
-        fn=choice(fns)
-        f = randrange(1,5)*choice([-1,1])*x^randrange(1,9)
-        fs += [
-            {
-                "f":f,
-                "fn":fn,
-                "x":x,
-                "df":f.diff(),
-            }
-        ]
+        # x=choice(xs)
+        # fn=choice(fns)
+        # f = randrange(1,5)*choice([-1,1])*x^randrange(1,9)
+        # fs += [
+        #     {
+        #         "f":f,
+        #         "fn":fn,
+        #         "x":x,
+        #         "df":f.diff(),
+        #     }
+        # ]
 
         #fractional power
         x=choice(xs)
@@ -113,7 +113,7 @@ class Generator(BaseGenerator):
             }
         ]
 
-        #shuffle(fs)
+        shuffle(fs)
         #fs=fs[:5]
         return {"fs":fs}
         
