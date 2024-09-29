@@ -36,15 +36,18 @@ class Generator(BaseGenerator):
             pairs = pairs + [[f_latex,df]] 
 
             #negative power
-            f = randrange(1,5)*choice([-1,1])*x^randrange(-7,-1)
-            df = f.diff()
-            pairs = pairs + [[f,df]] 
+            c=randrange(1,5)*choice([-1,1])
+            p=randrange(-7,-1)
+            f = c*x^p
+            f_latex = LatexExpr(f"{c}{x}^{{{p}}}")
+            df = LatexExpr(f"" + latex(c*p)+"{x}^{{{p}-1}}")
+            pairs = pairs + [[f_latex,df]] 
 
-            #difference of fractional powers
-            a = randrange(3,5)
-            f = randrange(2,5)*x^((2*a-1)/a)-randrange(2,5)*x^((a-1)/a)
-            df = f.diff()
-            pairs = pairs + [[f,df]] 
+            # #difference of fractional powers
+            # a = randrange(3,5)
+            # f = randrange(2,5)*x^((2*a-1)/a)-randrange(2,5)*x^((a-1)/a)
+            # df = f.diff()
+            # pairs = pairs + [[f,df]] 
                     
             shuffle(pairs)
             fl = latex(pairs[0][0])
