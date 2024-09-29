@@ -54,8 +54,8 @@ class Generator(BaseGenerator):
             dfl =latex(pairs[0][1])
             fr = latex(pairs[1][0])
             dfr =latex(pairs[1][1])
-            f = LatexExpr(f"\\left({fl}\\right)\\cdot\\left({fr}\\right)")
-            df = LatexExpr(f"\\left({fl}\\right)\\cdot\\left({dfr}\\right)+\\left({dfl}\\right)\\cdot\\left({fr}\\right)")
+            f = LatexExpr(f"\\displaystyle{{\\left({fl}\\right)\\cdot\\left({fr}\\right)}}")
+            df = LatexExpr(f"\\displaystyle{{\\left({fl}\\right)\\cdot\\left({dfr}\\right)+\\left({dfl}\\right)\\cdot\\left({fr}\\right)}}")
             
             fs += [
                 {
@@ -115,8 +115,8 @@ class Generator(BaseGenerator):
             dfl =latex(pairs[2][1])
             fr = latex(pairs[3][0])
             dfr =latex(pairs[3][1])
-            f = LatexExpr(f"\\frac{{{fl}}}{{{fr}}}")
-            df = LatexExpr(f"\\frac{{\\left({dfl}\\right)\\left({fr}\\right)-\\left({fl}\\right)\\left({dfr}\\right)}}{{\\left({fr}\\right)^2}}")
+            f = LatexExpr(f"\\displaystyle{{\\frac{{{fl}}}{{{fr}}}}}")
+            df = LatexExpr(f"\\displaystyle{{\\frac{{\\left({dfl}\\right)\\left({fr}\\right)-\\left({fl}\\right)\\left({dfr}\\right)}}{{\\left({fr}\\right)^2}}}}")
             
             fs += [
                 {
