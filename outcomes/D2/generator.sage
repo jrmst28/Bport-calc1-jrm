@@ -47,10 +47,10 @@ class Generator(BaseGenerator):
             pairs = pairs + [[f,df]] 
                     
             shuffle(pairs)
-            fl = pairs[0][0]
-            dfl =pairs[0][1]
-            fr = pairs[1][0]
-            dfr =pairs[1][1]
+            fl = latex(pairs[0][0])
+            dfl =latex(pairs[0][1])
+            fr = latex(pairs[1][0])
+            dfr =latex(pairs[1][1])
             f = LatexExpr(f"({fl})\\cdot({fr})")
             df = LatexExpr(f"({fl})\\cdot({dfr})+({dfl})\\cdot({fr})")
             
@@ -62,10 +62,10 @@ class Generator(BaseGenerator):
                     "df":df,
                 }
             ]
-            fl = pairs[0][0]
-            dfl =pairs[0][1]
-            fr = pairs[1][0]
-            dfr =pairs[1][1]
+            fl = latex(pairs[2][0])
+            dfl =latex(pairs[2][1])
+            fr = latex(pairs[3][0])
+            dfr =latex(pairs[3][1])
             f = LatexExpr(f"\\frac{{{fl}}}{{{fr}}}")
             df = LatexExpr(f"\\frac{{({dfl})({fr})-({fl})({dfr})}}{{({fr})^2}}")
             
