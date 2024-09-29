@@ -70,7 +70,7 @@ class Generator(BaseGenerator):
             fr = latex(pairs[3][0])
             dfr =latex(pairs[3][1])
             f = LatexExpr(f"\\frac{{{fl}}}{{{fr}}}")
-            df = LatexExpr(f"\\frac{{({dfl})({fr})-({fl})({dfr})}}{{({fr})^2}}")
+            df = LatexExpr(f"\\frac{{({dfl})({fr})-({fl})({dfr})}}{{\\left\\({fr}\\right\\)^2}}")
             
             fs += [
                 {
