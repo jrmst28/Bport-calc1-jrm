@@ -33,7 +33,7 @@ class Generator(BaseGenerator):
             f = x^(b/a)
             f_latex = LatexExpr(f"\\sqrt[{a}]{{{x}^{b}}}")
             df = f.diff()
-            pairs = pairs + [[f_latex,df]] 
+            pairs = pairs + [[f,df]] 
 
             #negative power
             c=randrange(1,5)*choice([-1,1])
@@ -70,7 +70,7 @@ class Generator(BaseGenerator):
             fr = latex(pairs[3][0])
             dfr =latex(pairs[3][1])
             f = LatexExpr(f"\\frac{{{fl}}}{{{fr}}}")
-            df = LatexExpr(f"\\frac{{\\left(({dfl}\\right)\\left(({fr}\\right)-\\left(({fl}\\right)\\left(({dfr}\\right)}}{{\\left({fr}\\right)^2}}")
+            df = LatexExpr(f"\\frac{{\\left({dfl}\\right)\\left({fr}\\right)-\\left({fl}\\right)\\left({dfr}\\right)}}{{\\left({fr}\\right)^2}}")
             
             fs += [
                 {
