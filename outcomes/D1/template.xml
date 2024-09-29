@@ -10,7 +10,7 @@ No product rule, quotient rule, etc.
         <knowl>
             <content>
                 <p>
-<me>{{fn}}({{x}}) = {{f}}</me>
+<m>{{fn}}({{x}}) = {{f}}</m>
                 </p>
             </content>
             <outtro>
