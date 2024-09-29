@@ -37,10 +37,10 @@ class Generator(BaseGenerator):
 
             #negative power
             c=randrange(1,5)*choice([-1,1])
-            p=randrange(-7,-1)
-            f = c*x^p
-            f_latex = LatexExpr(f"{c}{x}^{{{p}}}")
-            df = LatexExpr(f"" + latex(c*p)+"{x}^{{{p}-1}}")
+            p=randrange(1,7)
+            f = c*x^(-p)
+            f_latex = LatexExpr(f"{latex(c*x)}^{{-{p}}}")
+            df = LatexExpr(f"{latex(c*(-p)*x)}^{{{latex(1-p)}}}")
             pairs = pairs + [[f_latex,df]] 
 
             # #difference of fractional powers
