@@ -17,7 +17,7 @@ class Generator(BaseGenerator):
                 "f":functions[i],
                 "fn":fns[i],
                 "x":xs[i],
-                "df":functions[i].diff().simplify_full(),
+                "df":functions[i].diff(),
             }
             ]    
 
