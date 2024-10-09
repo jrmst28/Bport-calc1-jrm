@@ -5,17 +5,25 @@
     <url>https://checkit.clontz.org</url>
     <outcomes>
         <outcome>
-            <title>Derivatives of Powers and exponentials</title>
-            <slug>D1</slug>
-            <path>outcomes/D1</path>
+            <title>Derivatives of Powers and natural exponential</title>
+            <slug>3.abcd</slug>
+            <path>outcomes/3.abcd</path>
             <description>
-Derivatives of Powers and exponentials
+Derivatives of Powers and natural exponential
+            </description>
+        </outcome>
+        <outcome>
+            <title>Derivatives of trigonometric functions</title>
+            <slug>3.e</slug>
+            <path>outcomes/3.e</path>
+            <description>
+Derivatives of trigonometric functions
             </description>
         </outcome>
         <outcome>
             <title>Derivatives of products and quotients</title>
-            <slug>D2</slug>
-            <path>outcomes/D2</path>
+            <slug>3.hi</slug>
+            <path>outcomes/3.hi</path>
             <description>
 Derivatives of products and quotients
             </description>
